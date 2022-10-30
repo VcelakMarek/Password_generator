@@ -17,10 +17,27 @@ body {
     font-family: "JetBrains Mono";
     background-color: var(--very-dark-grey);
     color: var(--almost-white);
+    height: 100vh;
+    display: flex;
+}
+
+.password-generator {
+    width: 343px;
+    height: 540px;
+    margin: auto;
+}
+
+.card {
+    background-color: var(--dark-grey);
+    height: 423px;
+    padding: 16px;
 }
 
 h1 {
     text-align: center;
+    font-size: 16px;
+    color: var(--grey);
+    margin-top: 0;
 }
 
 .row {
@@ -30,22 +47,30 @@ h1 {
 
 .copy-icon {
     height: 20px;
-    align-self: center;
 }
 
 .display-password {
-   margin: 10px 0;
+   margin-bottom: 16px;
+   padding: 0 16px;
+   height: 64px;
+   align-items: center;
 }
 
-.password-generator {
-    width: 343px;
-    margin: auto;
+ul {
+    list-style: none;
+    padding-left: 0;
 }
-.card {
-    background-color: var(--dark-grey);
-    padding: 10px;
+
+li input {
+    margin-right: 15px;
 }
 
 .strength {
     background-color: var(--very-dark-grey);
+    align-items: center;
+    padding: 0 10px;
+}
+
+progress {
+    align-self: center;
 }
