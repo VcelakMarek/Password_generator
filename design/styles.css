@@ -1,0 +1,51 @@
+:root {
+    --very-dark-grey: #18171F;
+    --dark-grey: #24232C;
+    --grey: #817D92;
+    --almost-white: #E6E5EA;
+    --neon-green: #A4FFAF;
+    --yellow: #F8CD65;
+    --orange: #8FB7C5;
+    --red: #F64A4A;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "JetBrains Mono";
+    background-color: var(--very-dark-grey);
+    color: var(--almost-white);
+}
+
+h1 {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copy-icon {
+    height: 20px;
+    align-self: center;
+}
+
+.display-password {
+   margin: 10px 0;
+}
+
+.password-generator {
+    width: 343px;
+    margin: auto;
+}
+.card {
+    background-color: var(--dark-grey);
+    padding: 10px;
+}
+
+.strength {
+    background-color: var(--very-dark-grey);
+}
