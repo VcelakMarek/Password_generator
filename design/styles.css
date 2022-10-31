@@ -7,8 +7,6 @@
     --yellow: #F8CD65;
     --orange: #8FB7C5;
     --red: #F64A4A;
-
-    --icon-check: .assets/images/icon-check.svg
 }
 
 html {
@@ -43,6 +41,8 @@ h1 {
 }
 .generated-password {
     font-size: 24px;
+    color: var(--grey);
+    opacity: 25%;
 }
 .row {
     display: flex;
@@ -54,10 +54,29 @@ h1 {
     height: 47px;
 }
 
+.copied {
+    color: var(--neon-green);
+    size: 18px;
+    margin-right: 16px;
+    visibility: hidden;
+}
+
 .copy-icon {
     height: 20px;
     width: 17.5px;
     cursor: pointer;
+}
+
+.copy-icon:hover {
+    cursor: pointer;
+}
+
+img:hover svg{
+    fill: #18171F;
+}
+
+.copy-icon:active {
+    fill: var(--almost-white);
 }
 
 .display-password {
@@ -73,12 +92,12 @@ h1 {
 }
 
 input[type="range"] {
-    -webkit-appearance: none;  /* Override default CSS styles */
+    -webkit-appearance: none;
     appearance: none;
-    width: 100%; /* Full-width */
-    height: 8px; /* Specified height */
-    background: var(--very-dark-grey); /* Grey background */
-    outline: none; /* Remove outline */
+    width: 100%;
+    height: 8px;
+    background: var(--very-dark-grey);
+    outline: none;
     margin-bottom: 22px;
 }
 
@@ -92,6 +111,11 @@ input[type="range"]::-webkit-slider-thumb {
     cursor: pointer; /* Cursor on hover */
 }
 
+input[type="range"]::-webkit-slider-thumb:active {
+    background-color: var(--very-dark-grey);
+    border: 2px solid var(--neon-green);
+}
+
 ul {
     list-style: none;
     padding-left: 0;
@@ -103,7 +127,6 @@ ul {
 li {
     font-size: 16px;
     vertical-align: center;
-/*    padding-bottom: 16px;  */
 }
 
 li input {
@@ -160,6 +183,16 @@ button {
 
 progress {
     align-self: center;
+    appearance: none;
+    width: 40px;
+}
+
+.strength-level {
+    color: var(--almost-white);
+}
+
+progress::-webkit-progress-value {
+    background-color: white;
 }
 
 button {
@@ -167,8 +200,15 @@ button {
     color: black;
     font-size: 16px;
     background-color: var(--neon-green);
+    border:none;
 }
 
 button img {
     margin-left: 10px;
+}
+
+button:active {
+    background-color: var(--dark-grey);
+    color: var(--neon-green);
+    border: 2px solid var(--neon-green);
 }
