@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./design/styles.css">
   
-  <title>Frontend Mentor | Password generator app</title>
+  <title>Password generator app</title>
 </head>
 <body>
 
@@ -18,7 +18,10 @@
 
     <section class="row card display-password">
       <p class="generated-password">P4$5W0rD!</p>
-      <img src="./assets/images/icon-copy.svg" alt="copy" class="copy-icon">
+      <div class="row">
+        <p class="copied">COPIED</p>
+        <img src="./assets/images/icon-copy.svg" alt="copy" class="copy-icon">
+      </div>
     </section>
     
     <section class="card">  
@@ -27,26 +30,32 @@
         <p class="number-of-characters">0</p>
       </section>
 
-      <input type="range" value="0" min="0" max="20">
-      <ul>
+      <input type="range" value="0" min="0" max="20" id="password-length-range">
+      <ul id="checkbox-list">
         <li>
-          <input type="checkbox">Uppercase Letters
+          <input type="checkbox" id="uppercase">Uppercase Letters
         </li>
         <li>
-          <input type="checkbox">Include Lowercase Letters
+          <input type="checkbox" id="lowercase">Include Lowercase Letters
         </li>
         <li>
-          <input type="checkbox">Include Numbers
+          <input type="checkbox" id="numbers">Include Numbers
         </li>
         <li>
-          <input type="checkbox">Include Symbols
+          <input type="checkbox" id="symbols">Include Symbols
         </li>
       </ul>
 
       <section class="row strength">
         <p>STRENGTH</p>
-        <progress value="0" max="4"> 0 </progress>
+        <div class="row">
+          <p class="strength-level"></p>
+          <progress value="0" max="4"> 0 </progress>
+        </div>
       </section>
+
+
+
 
       <button>GENERATE
         <img src="./assets/images/icon-arrow-right.svg">
@@ -54,4 +63,6 @@
     </section>
   </section>
 </body>
+
+<script src="./scripts/script.js"></script>
 </html>
