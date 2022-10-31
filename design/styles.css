@@ -7,6 +7,8 @@
     --yellow: #F8CD65;
     --orange: #8FB7C5;
     --red: #F64A4A;
+
+    --icon-check: .assets/images/icon-check.svg
 }
 
 html {
@@ -70,7 +72,7 @@ h1 {
     font-size: 24px;
 }
 
-.slider {
+input[type="range"] {
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
     width: 100%; /* Full-width */
@@ -80,7 +82,7 @@ h1 {
     margin-bottom: 22px;
 }
 
-.slider::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
     width: 28px; /* Set a specific slider handle width */
@@ -93,17 +95,47 @@ h1 {
 ul {
     list-style: none;
     padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 li {
     font-size: 16px;
-    padding-bottom: 16px;
+    vertical-align: center;
+/*    padding-bottom: 16px;  */
 }
 
 li input {
     margin-right: 15px;
     cursor: pointer;
 }
+
+input[type="checkbox"] {
+    appearance: none;
+    position: relative;
+    vertical-align: -7px;
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--almost-white);
+    background-color: var(--dark-grey);
+  }
+
+  input[type="checkbox"]::before {
+    content: "✔";
+    color: var(--dark-grey);
+    background-color: var(--neon-green);
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    font-size: 1.2em;
+    visibility: hidden;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    /* Use `visibility` instead of `display` to avoid recalculating layout */
+    visibility: visible;
+  }
 
 .strength {
     background-color: var(--very-dark-grey);
