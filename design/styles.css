@@ -39,14 +39,23 @@ h1 {
     color: var(--grey);
     margin-top: 0;
 }
-
+.generated-password {
+    font-size: 24px;
+}
 .row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.character-length {
+    height: 47px;
 }
 
 .copy-icon {
     height: 20px;
+    width: 17.5px;
+    cursor: pointer;
 }
 
 .display-password {
@@ -56,21 +65,75 @@ h1 {
    align-items: center;
 }
 
+.number-of-characters {
+    color: var(--neon-green);
+    font-size: 24px;
+}
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 8px; /* Specified height */
+    background: var(--very-dark-grey); /* Grey background */
+    outline: none; /* Remove outline */
+    margin-bottom: 22px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 28px; /* Set a specific slider handle width */
+    height: 28px; /* Slider handle height */
+    border-radius: 50%;
+    background: var(--almost-white); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
 ul {
     list-style: none;
     padding-left: 0;
 }
 
+li {
+    font-size: 16px;
+    padding-bottom: 16px;
+}
+
 li input {
     margin-right: 15px;
+    cursor: pointer;
 }
 
 .strength {
     background-color: var(--very-dark-grey);
     align-items: center;
-    padding: 0 10px;
+    color: var(--grey);
+    margin-bottom: 16px ;
+}
+
+.strength p, 
+.strength progress {
+    margin: 16px;
+}
+
+.strength, 
+button {
+    width: 311px;
+    height: 56px;
 }
 
 progress {
     align-self: center;
+}
+
+button {
+    cursor: pointer;
+    color: black;
+    font-size: 16px;
+    background-color: var(--neon-green);
+}
+
+button img {
+    margin-left: 10px;
 }
