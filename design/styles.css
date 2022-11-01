@@ -5,7 +5,7 @@
     --almost-white: #E6E5EA;
     --neon-green: #A4FFAF;
     --yellow: #F8CD65;
-    --orange: #8FB7C5;
+    --orange: #FB7C58;
     --red: #F64A4A;
 }
 
@@ -191,8 +191,20 @@ progress {
     color: var(--almost-white);
 }
 
-progress::-webkit-progress-value {
-    background-color: white;
+.progress-red::-webkit-progress-value {
+    background-color: var(--red);
+}
+
+.progress-orange::-webkit-progress-value {
+    background-color: var(--orange);
+}
+
+.progress-yellow::-webkit-progress-value {
+    background-color: var(--yellow);
+}
+
+.progress-green::-webkit-progress-value {
+    background-color: var(--neon-green);
 }
 
 button {
