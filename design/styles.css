@@ -41,9 +41,15 @@ h1 {
 }
 .generated-password {
     font-size: 24px;
-    color: var(--grey);
+    color: var(--grey);  
     opacity: 25%;
 }
+
+.color-white {
+    font-size: 24px;
+    color: var(--almost-white);
+}
+
 .row {
     display: flex;
     justify-content: space-between;
@@ -61,6 +67,10 @@ h1 {
     visibility: hidden;
 }
 
+.copied-visible {
+    visibility: visible;
+}
+
 .copy-icon {
     height: 20px;
     width: 17.5px;
@@ -69,11 +79,10 @@ h1 {
 
 .copy-icon:hover {
     cursor: pointer;
+    filter: invert(0%) sepia(100%) saturate(5014%) hue-rotate(164deg) brightness(1000%) contrast(100%);
 }
 
-img:hover svg{
-    fill: #18171F;
-}
+
 
 .copy-icon:active {
     fill: var(--almost-white);
@@ -170,8 +179,7 @@ input[type="checkbox"] {
     margin-bottom: 16px ;
 }
 
-.strength p, 
-.strength progress {
+.strength p {
     margin: 16px;
 }
 
@@ -181,30 +189,8 @@ button {
     height: 56px;
 }
 
-progress {
-    align-self: center;
-    appearance: none;
-    width: 40px;
-}
-
 .strength-level {
     color: var(--almost-white);
-}
-
-.progress-red::-webkit-progress-value {
-    background-color: var(--red);
-}
-
-.progress-orange::-webkit-progress-value {
-    background-color: var(--orange);
-}
-
-.progress-yellow::-webkit-progress-value {
-    background-color: var(--yellow);
-}
-
-.progress-green::-webkit-progress-value {
-    background-color: var(--neon-green);
 }
 
 button {
@@ -223,4 +209,51 @@ button:active {
     background-color: var(--dark-grey);
     color: var(--neon-green);
     border: 2px solid var(--neon-green);
+}
+
+
+
+
+.progress-bar {
+    width: 64px;
+    height: 28px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 16px;
+}
+
+.progress-bar div {
+    border: 2px solid var(--almost-white);
+    flex-basis: 12.5%;
+}
+
+
+
+.progress-red div {
+    background-color: var(--red);
+    border: none;
+    flex-basis: 15.64%;
+    
+}
+
+.progress-orange {
+    background-color: var(--orange);
+    border: none;
+    flex-basis: 15.64%;
+}
+
+.progress-yellow {
+    background-color: var(--yellow);
+    border: none;
+    flex-basis: 15.64%;
+}
+
+.progress-green {
+    background-color: var(--neon-green);
+    border: none;
+    flex-basis: 15.64%;
+}
+
+progress::-webkit-progress-value  {
+    width: 10px;
 }
