@@ -246,3 +246,7 @@ button:active {
     color: var(--neon-green);
     border: 2px solid var(--neon-green);
 }
+
+button:active img {
+    filter: brightness(0) saturate(100%) invert(84%) sepia(17%) saturate(860%) hue-rotate(72deg) brightness(108%) contrast(103%);
+}
