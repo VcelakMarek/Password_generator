@@ -8,32 +8,34 @@ let characterLength = document.getElementsByClassName("number-of-characters")[0]
 //})
 
 let checkboxlist = document.getElementById("checkbox-list");
-let strength = document.getElementsByTagName("progress")[0];
-let progressBar = document.getElementsByTagName("progress")[0];
+let strengthStates = document.getElementsByClassName("strength-states")[0];
 let strengthLevel = document.getElementsByClassName("strength-level")[0];
+
+console.log(strengthStates);
 
 checkboxlist.addEventListener("change", (event) => {
     let realTimeChecked = document.querySelectorAll('input[type="checkbox"]:checked').length
-    strength.value = realTimeChecked;
+
 
     if (realTimeChecked === 1) {
         strengthLevel.textContent = "TOO WEAK!";
-        progressBar.className = "progress-red";
+        strengthStates.className = "strength-states strength-red";
 
     } else if (realTimeChecked === 2) {
         strengthLevel.textContent = "WEAK";
-        progressBar.className = "progress-orange";
+        strengthStates.className = "strength-states strength-orange";
 
     } else if (realTimeChecked === 3) {
         strengthLevel.textContent = "MEDIUM";
-        progressBar.className = "progress-yellow";
+        strengthStates.className = "strength-states strength-yellow";
 
     } else if (realTimeChecked === 4) {
         strengthLevel.textContent = "STRONG";
-        progressBar.className = "progress-green";
+        strengthStates.className = "strength-states strength-green";
 
     } else {
-        strengthLevel.textContent = ""
+        strengthLevel.textContent = "";
+        strengthStates.className = "strength-states";
     }
 })
 
@@ -71,7 +73,7 @@ function generatePassword (length) {
     if (uppercaseCheck) {
         generateFrom += uppercase;
     }
-    if (lowercaseCheck) {
+    if (lowercaseCheck) {       //add must generate at least 1 lowercase
         generateFrom += lowercase;
     }
     if (numberCheck) {
@@ -80,6 +82,7 @@ function generatePassword (length) {
     if (symbolsCheck) {
         generateFrom += symbols;
     }
+
 
 // add error when nothing is checked or 0 length
 
