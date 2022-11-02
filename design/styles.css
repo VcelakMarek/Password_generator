@@ -7,6 +7,8 @@
     --yellow: #F8CD65;
     --orange: #FB7C58;
     --red: #F64A4A;
+
+    --deafult-margin: 16px;
 }
 
 html {
@@ -23,14 +25,14 @@ body {
 
 .password-generator {
     width: 343px;
-    height: 540px;
+    height: 572px;
     margin: auto;
 }
 
 .card {
     background-color: var(--dark-grey);
     height: 423px;
-    padding: 16px;
+    padding: var(--deafult-margin);
 }
 
 h1 {
@@ -88,8 +90,8 @@ h1 {
 
 .display-password {
    margin-bottom: 16px;
-   padding: 0 16px;
-   height: 64px;
+/* padding: 16px;  */
+   height: 32px;
    align-items: center;
 }
 
@@ -105,7 +107,7 @@ input[type="range"] {
     height: 8px;
     background: var(--very-dark-grey);
     outline: none;
-    margin-bottom: 22px;
+    margin-bottom: 32px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -129,6 +131,7 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    margin-bottom: 32px;
 }
 
 li {
@@ -137,7 +140,7 @@ li {
 }
 
 li input {
-    margin-right: 15px;
+    margin-right: 20px;
     cursor: pointer;
 }
 
@@ -174,11 +177,12 @@ input[type="checkbox"] {
     background-color: var(--very-dark-grey);
     align-items: center;
     color: var(--grey);
-    margin-bottom: 16px ;
+    margin-bottom: var(--deafult-margin) ;
 }
 
-.strength p {
-    margin: 16px;
+.strength p,
+.strength-states {
+   margin: var(--deafult-margin);
 }
 
 .strength, 
@@ -187,8 +191,9 @@ button {
     height: 56px;
 }
 
-.strength-level {
+.strength .strength-level {
     color: var(--almost-white);
+    margin: 0;
 }
 
 .strength-states {
@@ -196,7 +201,7 @@ button {
     height: 28px;
     display: flex;
     justify-content: space-between;
-    margin-right: 16px;
+
 }
 
 .strength-states div {
@@ -207,7 +212,6 @@ button {
 .strength-red div:first-child {
     background-color: var(--red);
     border: none;
-
     flex-basis: 15.63%;
 }
 
@@ -249,4 +253,62 @@ button:active {
 
 button:active img {
     filter: brightness(0) saturate(100%) invert(84%) sepia(17%) saturate(860%) hue-rotate(72deg) brightness(108%) contrast(103%);
+}
+
+
+@media (min-width: 800px) {
+    :root {
+        --deafult-margin: 32px; 
+    }
+
+    .card {
+        width: 476px;
+        height: 464px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .display-password {
+        height: 48px;
+    }
+
+    .password-generator {
+        width: 540px;
+        height: 695px;
+    }
+
+    .generated-password {
+        font-size: 42px;
+    }
+
+    .color-white {
+        font-size: 42px;
+    }
+
+    .copy-icon {
+        height: 24px;
+        width: 21px;
+    }
+
+    .number-of-characters {
+        color: var(--neon-green);
+        font-size: 32px;
+    }
+
+    li {
+        font-size: 18px;
+    }
+
+    li input {
+        margin-right: 24px;
+    }
+
+    .strength, 
+    button {
+    width: 476px;
+    height: 65px;
+    font-size: 18px;
+}
 }
