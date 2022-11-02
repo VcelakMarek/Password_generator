@@ -74,17 +74,19 @@ function generatePassword (length) {
     display.className = "color-white";
 }
 
+const copyIcon = document.getElementsByClassName("copy-icon")[0]; 
+const copied = document.getElementsByClassName("copied")[0];
+
+copyIcon.addEventListener("click", () => {
+    copied.className = "copied copied-visible";
+    navigator.clipboard.writeText(display.textContent).then(() => {
+    });
+})
+
 
 const generateButton = document.getElementsByTagName("button")[0];
 
 generateButton.addEventListener("click", () => {
     generatePassword(characterLength.textContent);
-})
-
-
-const copyIcon = document.getElementsByClassName("copy-icon")[0]; 
-
-copyIcon.addEventListener("click", () => {
-    document.getElementsByClassName("copied")[0].className = "copied copied-visible";
-    navigator.clipboard.read(display.textContent);
+    copied.className = "copied";
 })
