@@ -82,8 +82,6 @@ h1 {
     filter: invert(0%) sepia(100%) saturate(5014%) hue-rotate(164deg) brightness(1000%) contrast(100%);
 }
 
-
-
 .copy-icon:active {
     fill: var(--almost-white);
 }
@@ -193,6 +191,44 @@ button {
     color: var(--almost-white);
 }
 
+.strength-states {
+    width: 64px;
+    height: 28px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 16px;
+}
+
+.strength-states div {
+    border: 2px solid var(--almost-white);
+    flex-basis: 9.38%;
+}
+
+.strength-red div:first-child {
+    background-color: var(--red);
+    border: none;
+
+    flex-basis: 15.63%;
+}
+
+.strength-orange div:nth-child(-n+2) {
+    background-color: var(--orange);
+    border: none;
+    flex-basis: 15.63%;
+}
+
+.strength-yellow div:nth-child(-n+3) {
+    background-color: var(--yellow);
+    border: none;
+    flex-basis: 15.63%;
+}
+
+.strength-green div {
+    background-color: var(--neon-green);
+    border: none;
+    flex-basis: 15.63%;
+}
+
 button {
     cursor: pointer;
     color: black;
@@ -209,51 +245,4 @@ button:active {
     background-color: var(--dark-grey);
     color: var(--neon-green);
     border: 2px solid var(--neon-green);
-}
-
-
-
-
-.progress-bar {
-    width: 64px;
-    height: 28px;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 16px;
-}
-
-.progress-bar div {
-    border: 2px solid var(--almost-white);
-    flex-basis: 12.5%;
-}
-
-
-
-.progress-red div {
-    background-color: var(--red);
-    border: none;
-    flex-basis: 15.64%;
-    
-}
-
-.progress-orange {
-    background-color: var(--orange);
-    border: none;
-    flex-basis: 15.64%;
-}
-
-.progress-yellow {
-    background-color: var(--yellow);
-    border: none;
-    flex-basis: 15.64%;
-}
-
-.progress-green {
-    background-color: var(--neon-green);
-    border: none;
-    flex-basis: 15.64%;
-}
-
-progress::-webkit-progress-value  {
-    width: 10px;
 }
