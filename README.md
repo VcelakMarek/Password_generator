@@ -1,4 +1,4 @@
-#Password generator app
+# Password generator app
 
 This project is a solution to the [Password generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/password-generator-app-Mr8CLycqjh).
 
