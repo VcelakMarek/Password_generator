@@ -45,7 +45,7 @@ Users should be able to:
 
 - how to work with svg files 
 - how to change HTML content via JavaScript
-- basics of JavaScript like for loop, If statements, functions, DOM, event listeners
+- basics of JavaScript like for loop, If statements, switch, functions, DOM, event listeners
 
 ### Useful resources
 
