@@ -17,25 +17,26 @@ const strengthLevel = document.getElementsByClassName("strength-level")[0];
 checkboxlist.addEventListener("change", () => {
     const numberOfChecked = document.querySelectorAll('input[type="checkbox"]:checked').length
 
-    if (numberOfChecked === 1) {
-        strengthLevel.textContent = "TOO WEAK!";
-        strengthStates.className = "strength-states strength-red";
-
-    } else if (numberOfChecked === 2) {
-        strengthLevel.textContent = "WEAK";
-        strengthStates.className = "strength-states strength-orange";
-
-    } else if (numberOfChecked === 3) {
-        strengthLevel.textContent = "MEDIUM";
-        strengthStates.className = "strength-states strength-yellow";
-
-    } else if (numberOfChecked === 4) {
-        strengthLevel.textContent = "STRONG";
-        strengthStates.className = "strength-states strength-green";
-
-    } else {
-        strengthLevel.textContent = "";
-        strengthStates.className = "strength-states";
+    switch (numberOfChecked) {
+        case 1:
+            strengthLevel.textContent = "TOO WEAK!";
+            strengthStates.className = "strength-states strength-red";
+        break;
+        case 2:
+            strengthLevel.textContent = "WEAK";
+            strengthStates.className = "strength-states strength-orange";
+            break;
+        case 3:
+            strengthLevel.textContent = "MEDIUM";
+            strengthStates.className = "strength-states strength-yellow";
+            break;
+        case 4:
+            strengthLevel.textContent = "STRONG";
+            strengthStates.className = "strength-states strength-green";
+        break;
+        default:
+            strengthLevel.textContent = "";
+            strengthStates.className = "strength-states";
     }
 })
 
