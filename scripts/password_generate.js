@@ -70,9 +70,36 @@ function generatePassword (length) {
         generatedPassword += generateFrom.charAt(Math.floor(Math.random() * generateFrom.length));
     }
 
+
+    function dynamicDisplayTextSize (length) {
+        if (length > 13) {
+            if (window.innerWidth >= "800") {
+                let substractWidth = (32 - (length/5));
+                display.style.fontSize = substractWidth + "px";
+            } else {
+                let substractWidth = (24 - (length/3));
+                display.style.fontSize = substractWidth + "px";
+            }
+        }
+        else {
+            if (window.innerWidth >= "800") {
+                display.style.fontSize = "32px";
+            } else {
+                display.style.fontSize = "24px";
+            }    
+        }
+    }
+
+    dynamicDisplayTextSize(length);
+
+    window.addEventListener('resize', () => { 
+        dynamicDisplayTextSize(length);
+    })
+
     display.textContent = generatedPassword;
     display.className = "color-white";
 }
+
 
 const copyIcon = document.getElementsByClassName("copy-icon")[0]; 
 const copied = document.getElementsByClassName("copied")[0];
