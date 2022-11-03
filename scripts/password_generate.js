@@ -5,6 +5,10 @@ rangeValue.addEventListener("mousemove", () => {
     characterLength.textContent = rangeValue.value;
 })
 
+rangeValue.addEventListener("click", () => {
+    characterLength.textContent = rangeValue.value;
+})
+
 
 const checkboxlist = document.getElementById("checkbox-list");
 const strengthStates = document.getElementsByClassName("strength-states")[0];
