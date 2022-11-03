@@ -48,23 +48,29 @@ function generatePassword (length) {
     let generatedPassword = "";
     let generateFrom = "";
 
-    const uppercaseCheck = document.getElementById("uppercase").checked
-    const lowercaseCheck = document.getElementById("lowercase").checked
-    const numberCheck = document.getElementById("numbers").checked
-    const symbolsCheck = document.getElementById("symbols").checked
+
+   // const uppercaseCheck = document.getElementById("uppercase").checked
+   // const lowercaseCheck = document.getElementById("lowercase").checked
+   // const numberCheck = document.getElementById("numbers").checked
+   // const symbolsCheck = document.getElementById("symbols").checked
     
+    const checkboxCheck = {uppercaseCheck: document.getElementById("uppercase").checked,
+        lowercaseCheck:document.getElementById("lowercase").checked,
+        numberCheck: document.getElementById("numbers").checked,
+        symbolsCheck: document.getElementById("symbols").checked}
+
     const characters = {uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ", lowercase: "abcdefghijklmnopqrstuvwxy", numbers: "0123456789", symbols: "!@#$%^&*()"};
 
-    if (uppercaseCheck) {
+    if (checkboxCheck.uppercaseCheck) {
         generateFrom += characters.uppercase;
     }
-    if (lowercaseCheck) {
+    if (checkboxCheck.lowercaseCheck) {
         generateFrom += characters.lowercase;
     }
-    if (numberCheck) {
+    if (checkboxCheck.numberCheck) {
         generateFrom += characters.numbers;
     }
-    if (symbolsCheck) {
+    if (checkboxCheck.symbolsCheck) {
         generateFrom += characters.symbols;
     }
 
