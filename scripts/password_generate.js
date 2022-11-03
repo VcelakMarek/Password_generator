@@ -52,23 +52,20 @@ function generatePassword (length) {
     const lowercaseCheck = document.getElementById("lowercase").checked
     const numberCheck = document.getElementById("numbers").checked
     const symbolsCheck = document.getElementById("symbols").checked
-
-    const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const lowercase = "abcdefghijklmnopqrstuvwxy";
-    const numbers = "0123456789";
-    const symbols = "!@#$%^&*()";
     
+    const characters = {uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ", lowercase: "abcdefghijklmnopqrstuvwxy", numbers: "0123456789", symbols: "!@#$%^&*()"};
+
     if (uppercaseCheck) {
-        generateFrom += uppercase;
+        generateFrom += characters.uppercase;
     }
     if (lowercaseCheck) {
-        generateFrom += lowercase;
+        generateFrom += characters.lowercase;
     }
     if (numberCheck) {
-        generateFrom += numbers;
+        generateFrom += characters.numbers;
     }
     if (symbolsCheck) {
-        generateFrom += symbols;
+        generateFrom += characters.symbols;
     }
 
     for ( let i = 0; i < length; i++ ) {
