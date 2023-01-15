@@ -9,7 +9,6 @@ rangeValue.addEventListener("click", () => {
     characterLength.textContent = rangeValue.value;
 })
 
-
 const checkboxlist = document.getElementById("checkbox-list");
 const strengthStates = document.getElementsByClassName("strength-states")[0];
 const strengthLevel = document.getElementsByClassName("strength-level")[0];
@@ -39,7 +38,6 @@ checkboxlist.addEventListener("change", () => {
             strengthStates.className = "strength-states";
     }
 })
-
 
 const display = document.getElementsByClassName("generated-password")[0];
 
@@ -75,7 +73,6 @@ function generatePassword (length) {
         generatedPassword += generateFrom.charAt(Math.floor(Math.random() * generateFrom.length));
     }
 
-
     function dynamicDisplayTextSize (length) {
         if (length > 13) {
             if (window.innerWidth >= "800") {
@@ -105,7 +102,6 @@ function generatePassword (length) {
     display.className = "color-white";
 }
 
-
 const copyIcon = document.getElementsByClassName("copy-icon")[0]; 
 const copied = document.getElementsByClassName("copied")[0];
 
@@ -114,7 +110,6 @@ copyIcon.addEventListener("click", () => {
     navigator.clipboard.writeText(display.textContent).then(() => {
     });
 })
-
 
 const generateButton = document.getElementsByTagName("button")[0];
 
